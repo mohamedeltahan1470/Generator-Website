@@ -3,12 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background: #bbc6fa;
 }
+
 .quote-box {
   background: #fff;
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -16,13 +19,15 @@ body {
   padding: 40px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
 h2 {
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 40px;
   position: relative;
 }
+
 .quote-box h2::after {
   content: "";
   width: 75px;
@@ -34,20 +39,24 @@ h2 {
   left: 50%;
   transform: translate(-50%);
 }
+
 .quote-box blockquote {
-  font-size: 26px;
+  font-size: 1.5rem;
   min-height: 110px;
 }
+
 .quote-box blockquote::before,
 .quote-box blockquote::after {
   content: ' " ';
 }
+
 .quote-box span {
   display: block;
   margin-top: 10px;
   float: right;
   position: relative;
 }
+
 .quote-box span::before {
   content: "";
   width: 20px;
@@ -57,12 +66,14 @@ h2 {
   top: 50%;
   left: -30px;
 }
+
 .quote-box div {
   width: 100%;
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
+
 .quote-box button {
   background: rgb(23, 124, 229);
   color: #fff;
@@ -76,12 +87,28 @@ h2 {
   margin: 5px;
   cursor: pointer;
 }
-.quote-box button i{
-    font-size: 20px;
-    margin-right: 10px;
-    color: rgb(10, 153, 255);
+
+.quote-box button i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: rgb(10, 153, 255);
 }
-.quote-box button:nth-child(2){
-    background: transparent;
-    color: #333;
+
+.quote-box button:nth-child(2) {
+  background: transparent;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .quote-box {
+    padding: 20px;
+  }
+
+  .quote-box button {
+    width: 100%;
+  }
 }
